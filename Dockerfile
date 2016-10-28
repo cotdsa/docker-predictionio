@@ -1,7 +1,7 @@
 FROM ubuntu
 MAINTAINER Matteo Sessa <webops@catchoftheday.com.au>
 
-ENV PIO_VERSION 0.9.6-spark1.5.2
+ENV PIO_VERSION 0.9.6
 ENV SPARK_VERSION 1.5.2
 
 ENV PIO_HOME /PredictionIO-${PIO_VERSION}
@@ -13,7 +13,7 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-RUN curl -O https://s3-ap-southeast-2.amazonaws.com/cotdsa-public/PredictionIO-${PIO_VERSION}.tar.gz \
+RUN curl -O https://s3-ap-southeast-2.amazonaws.com/cotdsa-public/PredictionIO-${PIO_VERSION}-spark1.5.2.tar.gz \
     && tar -xvzf PredictionIO-${PIO_VERSION}.tar.gz -C / && mkdir -p ${PIO_HOME}/vendors \
     && rm PredictionIO-${PIO_VERSION}.tar.gz
 
