@@ -22,7 +22,7 @@ RUN curl -O http://d3kbcqa49mib13.cloudfront.net/spark-${SPARK_VERSION}-bin-hado
     && tar -xvzf spark-${SPARK_VERSION}-bin-hadoop2.6.tgz -C ${PIO_HOME}/vendors \
     && rm spark-${SPARK_VERSION}-bin-hadoop2.6.tgz
 
-RUN mkdir ${PIO_HOME}/plugins && cd ${PIO_HOME}/plugins && curl -O https://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.8.9.1/sqlite-jdbc-${SQLITE_JDBC_VER}.jar
+RUN mkdir ${PIO_HOME}/plugins && cd ${PIO_HOME}/plugins && curl -O https://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/${SQLITE_JDBC_VER}/sqlite-jdbc-${SQLITE_JDBC_VER}.jar
 
 #triggers fetching the complete sbt environment
 RUN ${PIO_HOME}/sbt/sbt -batch
