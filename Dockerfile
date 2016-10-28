@@ -24,4 +24,4 @@ RUN curl -O http://d3kbcqa49mib13.cloudfront.net/spark-${SPARK_VERSION}-bin-hado
 #triggers fetching the complete sbt environment
 RUN ${PIO_HOME}/sbt/sbt -batch
 
-#COPY files/pio-env.sh ${PIO_HOME}/conf/pio-env.sh
+COPY files/pio-env.sh ${PIO_HOME}/conf/pio-env.sh
