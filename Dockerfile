@@ -14,8 +14,8 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 RUN curl -O https://s3-ap-southeast-2.amazonaws.com/cotdsa-public/PredictionIO-${PIO_VERSION}-spark1.5.2.tar.gz \
-    && tar -xvzf PredictionIO-${PIO_VERSION}.tar.gz -C / && mkdir -p ${PIO_HOME}/vendors \
-    && rm PredictionIO-${PIO_VERSION}.tar.gz
+    && tar -xvzf PredictionIO-${PIO_VERSION}-spark1.5.2.tar.gz -C / && mkdir -p ${PIO_HOME}/vendors \
+    && rm PredictionIO-${PIO_VERSION}-spark1.5.2.tar.gz
 
 RUN curl -O http://d3kbcqa49mib13.cloudfront.net/spark-${SPARK_VERSION}-bin-hadoop2.6.tgz \
     && tar -xvzf spark-${SPARK_VERSION}-bin-hadoop2.6.tgz -C ${PIO_HOME}/vendors \
