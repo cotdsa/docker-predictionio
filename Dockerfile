@@ -1,8 +1,8 @@
 FROM ubuntu
 MAINTAINER Matteo Sessa <webops@catchoftheday.com.au>
 
-ENV PIO_VERSION 0.9.6
-ENV SPARK_VERSION 1.5.1
+ENV PIO_VERSION 0.9.6-spark1.5.2
+ENV SPARK_VERSION 1.5.2
 
 ENV PIO_HOME /PredictionIO-${PIO_VERSION}
 ENV PATH=${PIO_HOME}/bin:$PATH
